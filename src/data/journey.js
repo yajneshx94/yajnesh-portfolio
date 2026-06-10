@@ -1,0 +1,38 @@
+export const journey = [
+  {
+    id: 1,
+    year: "2024",
+    month: "November",
+    title: "VoiceFlow",
+    description: "Built my first end-to-end Python project — a voice-driven content processor using speech recognition and NLP. This was where I got serious about building real things.",
+    tech: ["Python", "NLP", "Flask"],
+    type: "project",
+  },
+  {
+    id: 2,
+    year: "2025",
+    month: "March",
+    title: "WikiFetcher",
+    description: "Explored Wikipedia's API to build a content generation tool. Learned Flask, API integration, and text processing pipelines.",
+    tech: ["Python", "Flask", "Wikipedia API"],
+    type: "project",
+  },
+  {
+    id: 3,
+    year: "2025",
+    month: "July",
+    title: "LinkNest",
+    description: "Dove deep into Spring Security and JWT. Built a production-grade multi-tenant auth system — my first serious backend architecture project.",
+    tech: ["Spring Boot", "JWT", "PostgreSQL"],
+    type: "project",
+  },
+  {
+    id: 4,
+    year: "2025",
+    month: "December",
+    title: "LADS — Log Anomaly Detection",
+    description: "My most complex project yet. Combined ML (Isolation Forest) with Kubernetes observability tooling. Learnt a lot about distributed systems and anomaly detection.",
+    tech: ["Java", "Python", "Kubernetes", "Prometheus"],
+    type: "project",
+  },
+]

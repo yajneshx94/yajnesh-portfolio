@@ -62,9 +62,9 @@ export default function Navbar() {
         {/* Social footer in sidebar */}
         <div className="p-4 border-t border-accent-blue/10 flex gap-3 lg:flex-col lg:gap-2">
           {[
-            { href: 'https://github.com/yourusername',     label: 'GH' },
-            { href: 'https://linkedin.com/in/yourusername', label: 'LI' },
-            { href: 'mailto:yajnesh@email.com',             label: '@' },
+            { href: 'https://github.com/yajneshx94',     label: 'GH' },
+            { href: 'https://linkedin.com/in/yajnesh-k-503023258', label: 'LI' },
+            { href: 'mailto:yajnesh.work@email.com',             label: '@' },
           ].map(({ href, label }) => (
             <a
               key={label}

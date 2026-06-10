@@ -2,12 +2,43 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>yajnesh-portfolio</title>
+    <title>Yajnesh K — Software Developer</title>
+    <meta name="description" content="Portfolio of Yajnesh K, Software Developer specialising in Java, Spring Boot and React." />
+    <style>
+      #preloader {
+        position: fixed; inset: 0;
+        background: #090A0F;
+        display: flex; justify-content: center; align-items: center;
+        z-index: 9999;
+      }
+    </style>
   </head>
   <body>
+    <div id="preloader">
+      <div style="text-align:center">
+        <p style="color:#6bff7f;font-family:sans-serif;font-size:13px;letter-spacing:4px;margin-bottom:20px;opacity:0.7">INITIALISING</p>
+        <div class="loader"></div>
+      </div>
+    </div>
+
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+
     <div id="root"></div>
+
+    <script>
+      window.addEventListener('load', () => {
+        const pre = document.getElementById('preloader')
+        setTimeout(() => {
+          pre.style.transition = 'opacity 0.6s ease'
+          pre.style.opacity = '0'
+          pre.style.pointerEvents = 'none'
+          setTimeout(() => pre.remove(), 600)
+        }, 1800)
+      })
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
