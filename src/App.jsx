@@ -6,6 +6,8 @@ import Projects from './pages/Projects'
 import Journey from './pages/Journey'
 import Skills from './pages/Skills'
 import Profile from './pages/Profile'
+import Resume from './pages/Resume'
+import ProjectDetail from './pages/ProjectDetail'
 
 export default function App() {
   return (
@@ -19,6 +21,8 @@ export default function App() {
             <Route path="/journey"  element={<Journey />} />
             <Route path="/skills"   element={<Skills />} />
             <Route path="/profile"  element={<Profile />} />
+            <Route path="/resume"   element={<Resume />} />
+            <Route path="/projects/:id" element={<ProjectDetail />} />
           </Routes>
           <Footer />
         </div>

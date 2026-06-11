@@ -18,7 +18,8 @@ export default function Skills() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: i * 0.1 }}
-              className="border border-white/8 rounded-xl p-6 bg-white/2 hover:border-accent-cyan/20 transition-all duration-300"
+              className="border rounded-xl p-6 transition-all duration-300"
+              style={{ borderColor: 'rgba(0,180,255,0.25)', background: 'rgba(0,180,255,0.03)' }}
             >
               <div className="flex items-center gap-3 mb-5">
                 <span className="text-2xl">{s.icon}</span>
@@ -28,7 +29,8 @@ export default function Skills() {
                 {s.items.map(item => (
                   <span
                     key={item}
-                    className="text-sm px-3 py-1 rounded-lg bg-space-mid/80 text-white/60 border border-white/8 hover:text-accent-cyan hover:border-accent-cyan/20 transition-colors"
+                    className="text-sm px-3 py-1 rounded-lg transition-colors"
+                    style={{ background: 'rgba(0,180,255,0.08)', color: 'rgba(255,255,255,0.7)', border: '1px solid rgba(0,180,255,0.2)' }}
                   >
                     {item}
                   </span>

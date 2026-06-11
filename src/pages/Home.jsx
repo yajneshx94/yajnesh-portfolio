@@ -56,8 +56,8 @@ export default function Home() {
         </div>
 
         <p className="text-white/40 text-base md:text-lg max-w-xl leading-relaxed mb-4">
-          Building scalable backend systems with Java & Spring Boot. Exploring the intersection of cloud infrastructure and intelligent software.
-        </p>
+  I'm a Computer Science graduate who builds backend systems that actually work under pressure. I work primarily with Java and Spring Boot — building everything from secure authentication platforms to real-time anomaly detection systems. I'm especially drawn to fintech, logistics, and AI in IT operations, where backend software drives real decisions.
+</p>
 
         <p className="text-white/25 text-sm font-mono tracking-widest mb-12">
           JAVA · SPRING BOOT · REACT · SQL · PYTHON

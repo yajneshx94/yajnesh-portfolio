@@ -1,31 +1,44 @@
+import { useNavigate } from 'react-router-dom'
+
 export default function ProjectCard({ project }) {
+  const navigate = useNavigate()
+
+  console.log('project id:', project.id) // temporary debug
+
   return (
-    <div className="group relative border border-white/10 rounded-xl p-6 bg-white/2 hover:bg-white/5 hover:border-accent-cyan/30 transition-all duration-300">
+    <div
+      onClick={() => navigate(`/projects/${project.id}`)}
+      className="group relative rounded-xl p-6 cursor-pointer transition-all duration-300"
+      style={{ border: '1px solid rgba(255,255,255,0.08)', background: 'rgba(255,255,255,0.02)' }}
+      onMouseEnter={e => { e.currentTarget.style.borderColor = 'rgba(0,229,255,0.3)'; e.currentTarget.style.background = 'rgba(0,180,255,0.05)' }}
+      onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(255,255,255,0.08)'; e.currentTarget.style.background = 'rgba(255,255,255,0.02)' }}
+    >
       {project.highlight && (
-        <span className="absolute top-4 right-4 text-xs text-accent-green border border-accent-green/30 px-2 py-0.5 rounded-full">
+        <span className="absolute top-4 right-4 text-xs px-2 py-0.5 rounded-full font-mono"
+          style={{ color: '#4ade80', border: '1px solid rgba(74,222,128,0.3)' }}>
           Featured
         </span>
       )}
-      <p className="text-white/30 text-xs font-mono mb-2">{project.year}</p>
+      <p className="font-mono text-xs mb-2" style={{ color: 'rgba(255,255,255,0.3)' }}>{project.year}</p>
       <h3 className="text-xl font-semibold text-white mb-1">{project.title}</h3>
-      <p className="text-accent-cyan/70 text-sm mb-4">{project.subtitle}</p>
-      <p className="text-white/50 text-sm leading-relaxed mb-6">{project.description}</p>
+      <p className="text-sm mb-4" style={{ color: 'rgba(0,229,255,0.7)' }}>{project.subtitle}</p>
+      <p className="text-sm leading-relaxed mb-6" style={{ color: 'rgba(255,255,255,0.45)' }}>{project.description}</p>
       <div className="flex flex-wrap gap-2 mb-6">
-        {project.tech.map(t => (
-          <span key={t} className="text-xs px-2 py-1 rounded bg-accent-blue/10 text-accent-blue border border-accent-blue/20">
+        {project.tech.slice(0, 4).map(t => (
+          <span key={t} className="text-xs px-2 py-1 rounded font-mono"
+            style={{ background: 'rgba(0,180,255,0.1)', color: '#00b4ff', border: '1px solid rgba(0,180,255,0.2)' }}>
             {t}
           </span>
         ))}
+        {project.tech.length > 4 && (
+          <span className="text-xs px-2 py-1 rounded font-mono" style={{ color: 'rgba(255,255,255,0.3)' }}>
+            +{project.tech.length - 4} more
+          </span>
+        )}
       </div>
-      
-      <a
-        href={project.github}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="inline-flex items-center gap-2 text-sm text-white/50 hover:text-accent-cyan transition-colors group-hover:text-accent-cyan/80"
-      >
-        <span className="font-mono">→</span> GitHub Repository
-      </a>
+      <p className="text-sm" style={{ color: 'rgba(255,255,255,0.3)' }}>
+        View case study <span style={{ color: '#00e5ff' }}>→</span>
+      </p>
     </div>
   )
 }

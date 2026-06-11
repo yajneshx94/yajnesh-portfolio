@@ -5,19 +5,20 @@ export default {
     extend: {
       colors: {
         space: {
-          dark:  '#090A0F',
-          mid:   '#1B2735',
-          light: '#2a4a6b',
+          dark:  '#050a12',
+          mid:   '#0a1628',
+          light: '#0d2244',
         },
         accent: {
-          green: '#6bff7f',
-          blue:  '#00b4ff',
+          // ── CHANGE ACCENT COLORS HERE ──
+          green: '#00b4ff',   // renamed but keeping 'green' key so no code breaks — this is now space blue
+          blue:  '#0066cc',
           cyan:  '#00e5ff',
         }
       },
       fontFamily: {
-        sans:  ['Space Grotesk', 'sans-serif'],
-        lato:  ['Lato', 'sans-serif'],
+        sans: ['Space Grotesk', 'sans-serif'],
+        lato: ['Lato', 'sans-serif'],
       },
       animation: {
         'fade-in':    'fadeIn 0.8s ease forwards',
